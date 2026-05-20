@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Design Review Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            animation: fadeSlideIn 1.5s ease;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            width: 220px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card .question {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card .answer {
+            opacity: 0;
+            transition: opacity 0.5s;
+            color: #555;
+        }
+
+        .card:hover .answer {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Design Review Cards</h1>
+    <div class="cards-container">
+        <div class="card">
+            <p class="question">What does CSS stand for?</p>
+            <p class="answer">Cascading Style Sheets</p>
+        </div>
+        <div class="card">
+            <p class="question">What tag creates a paragraph?</p>
+            <p class="answer">The &lt;p&gt; tag</p>
+        </div>
+        <div class="card">
+            <p class="question">What property changes text color?</p>
+            <p class="answer">The color property</p>
+        </div>
+        <div class="card">
+            <p class="question">What does the &lt;a&gt; tag do?</p>
+            <p class="answer">Creates a hyperlink</p>
+        </div>
+        <div class="card">
+            <p class="question">What is the box model?</p>
+            <p class="answer">Content, padding, border, and margin</p>
+        </div>
+        <div class="card">
+            <p class="question">How do you make text bold in HTML?</p>
+            <p class="answer">Use the &lt;b&gt; or &lt;strong&gt; tag</p>
+        </div>
+        <div class="card">
+            <p class="question">What does float do?</p>
+            <p class="answer">Positions an element to the left or right</p>
+        </div>
+        <div class="card">
+            <p class="question">What is a CSS pseudo class?</p>
+            <p class="answer">A keyword added to a selector for a special state</p>
+        </div>
+    </div>
+</body>
+</html>

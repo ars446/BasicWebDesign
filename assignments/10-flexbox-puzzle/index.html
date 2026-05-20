@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Flexbox Puzzle — Arsenii Kosterin</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      .page-grid {
+        display: grid;
+        grid-template-areas:
+          "header"
+          "puzzle"
+          "date";
+        gap: 20px;
+        max-width: 700px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .header-section {
+        grid-area: header;
+        text-align: center;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .puzzle-section {
+        grid-area: puzzle;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+      }
+      .puzzle-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        margin: 0 auto;
+      }
+      .puzzle-container img {
+        display: block;
+        width: 150px;
+        height: 110px;
+      }
+      .puzzle-container img.hidden-piece {
+        display: none;
+      }
+      .date-section {
+        grid-area: date;
+        text-align: center;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 15px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-grid">
+      <section class="header-section">
+        <h1>Butterflies Puzzle</h1>
+        <p>By Arsenii Kosterin</p>
+      </section>
+      <section class="puzzle-section">
+        <h2>Assembled Puzzle</h2>
+        <div class="puzzle-container">
+          <img src="images/puzzle1_Q.jpg"/><img src="images/puzzle1_G.jpg"/><img src="images/puzzle1_A.jpg"/><img src="images/puzzle1_J.jpg"/>
+		  <img src="images/puzzle1_M.jpg"/><img src="images/puzzle1_P.jpg"/><img src="images/puzzle1_B.jpg"/><img src="images/puzzle1_H.jpg"/>
+          <img src="images/puzzle1_O.jpg"/><img src="images/puzzle1_E.jpg"/><img src="images/puzzle1_N.jpg"/><img src="images/puzzle1_C.jpg"/>
+          <img src="images/puzzle1_I.jpg"/><img src="images/puzzle1_F.jpg"/><img src="images/puzzle1_L.jpg"/><img src="images/puzzle1_K.jpg"/>
+		  
+		  <img src="images/puzzle1_D.jpg" class="hidden-piece"/>
+        </div>
+      </section>
+      <section class="date-section">
+        <p>Completed: May 20, 2026</p>
+      </section>
+    </div>
+  </body>
+</html>

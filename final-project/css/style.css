@@ -1,0 +1,653 @@
+/*
+********************
+* TABLE OF CONTENTS
+********************
+* 1. Global Styles
+* 2. Navigation
+* 3. Hero Section
+* 4. Page Header
+* 5. Grid Layouts
+* 6. Flexbox Layouts
+* 7. Cards
+* 8. Tables
+* 9. Lists
+* 10. Forms
+* 11. Menu Page
+* 12. Gallery Page
+* 13. Learn Page
+* 14. Footer
+* 15. Animations
+* 16. Transitions & Filters
+********************
+*/
+
+/* 1. Global Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FAF3E0;
+  color: #333333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+  color: hsl(222, 47%, 20%);
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.8em;
+  border-bottom: 2px solid #E8A838;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+p {
+  font-size: 1.05em;
+  margin-bottom: 12px;
+}
+
+a {
+  color: #2C3E6B;
+}
+
+a:hover {
+  color: rgb(232, 168, 56);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #DDD5C5;
+  margin: 25px 0;
+}
+
+
+/* 2. Navigation */
+nav {
+  background-color: #1B2A4A;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a {
+  display: block;
+  color: #FAF3E0;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #E8A838;
+  color: #1B2A4A;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  border-bottom: 3px solid #E8A838;
+}
+
+
+/* 3. Hero Section */
+.hero {
+  background-image: linear-gradient(135deg, #1B2A4A, #2C3E6B, #1B2A4A);
+  color: #FAF3E0;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  color: #E8A838;
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  animation-name: fadeSlideIn;
+  animation-duration: 1.5s;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #DDD5C5;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero .subtitle {
+  font-style: italic;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+
+/* 4. Page Header */
+.page-header {
+  background-image: linear-gradient(to right, #1B2A4A, #2C3E6B);
+  color: #FAF3E0;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.page-header h1 {
+  color: #E8A838;
+  margin: 0;
+}
+
+.page-header p {
+  color: #DDD5C5;
+  margin: 5px 0 0 0;
+}
+
+
+/* 5. Grid Layouts */
+.grid-3col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.grid-2col {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.grid-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "sidebar"
+    "footer";
+}
+
+
+/* 6. Flexbox Layouts */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.flex-row .flex-item {
+  flex: 1 1 280px;
+  max-width: 320px;
+}
+
+
+/* 7. Cards */
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #DDD5C5;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #1B2A4A;
+}
+
+.card:hover {
+  box-shadow: 3px 3px 10px rgba(27, 42, 74, 0.15);
+  transition: box-shadow 0.3s;
+}
+
+.card img {
+  border-radius: 8px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #E8DCC8;
+}
+
+.highlight-card {
+  border-left: 4px solid #E8A838;
+}
+
+
+/* 8. Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  background-color: #FFFFFF;
+}
+
+th {
+  background-color: #1B2A4A;
+  color: #FAF3E0;
+  padding: 12px 10px;
+  text-align: left;
+  font-family: Georgia, serif;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #DDD5C5;
+}
+
+caption {
+  font-family: Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1B2A4A;
+  padding: 10px;
+  caption-side: top;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: hsl(40, 50%, 95%);
+}
+
+tbody tr:hover {
+  background-color: hsl(40, 60%, 90%);
+}
+
+tfoot td {
+  font-weight: bold;
+  background-color: #E8DCC8;
+  border-top: 2px solid #1B2A4A;
+}
+
+.schedule-time {
+  font-weight: bold;
+  color: #2C3E6B;
+  white-space: nowrap;
+}
+
+col.col-time {
+  background-color: rgba(232, 168, 56, 0.08);
+}
+
+
+/* 9. Lists */
+ul.styled-list {
+  padding-left: 17px;
+}
+
+ul.styled-list li {
+  margin-bottom: 8px;
+}
+
+ul.square-list {
+  list-style-type: square;
+}
+
+ol.alpha-list {
+  list-style-type: lower-alpha;
+}
+
+ul.nested-list > li {
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+ul.nested-list ul {
+  font-weight: normal;
+  list-style-type: circle;
+  margin-top: 5px;
+}
+
+.benefit-list li {
+  padding: 5px 0;
+}
+
+
+/* 10. Forms */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #1B2A4A;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #DDD5C5;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  border-color: #E8A838;
+  outline: none;
+}
+
+.form-group .radio-group label,
+.form-group .checkbox-group label {
+  display: inline;
+  font-weight: normal;
+  margin-right: 15px;
+}
+
+.btn-submit {
+  background-color: #E8A838;
+  color: #1B2A4A;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #C4892A;
+}
+
+
+/* 11. Menu Page */
+.menu-card {
+  width: 30%;
+  min-width: 250px;
+  border: 2px solid #C4A35A;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  float: left;
+  position: relative;
+}
+
+.menu-card h3 {
+  text-align: center;
+  border-bottom: 1px solid #E8A838;
+  padding-bottom: 8px;
+  margin-top: 0;
+}
+
+.menu-card .menu-item {
+  padding: 5px 0;
+  border-bottom: 1px dotted #DDD5C5;
+  overflow: auto;
+}
+
+.menu-card .menu-item .item-name {
+  float: left;
+}
+
+.menu-card .menu-item .item-price {
+  float: right;
+  font-weight: bold;
+  color: #2C3E6B;
+}
+
+.menu-card .menu-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #E8A838;
+  color: #1B2A4A;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.menu-section {
+  overflow: auto;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-intro {
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+
+
+/* 12. Gallery Page */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.gallery-item {
+  flex: 1 1 280px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #DDD5C5;
+  transition: transform 0.4s, filter 0.4s;
+  background-color: #E8DCC8;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.03);
+  filter: brightness(110%);
+}
+
+.gallery-item figcaption {
+  font-size: 0.9em;
+  color: #666666;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+
+/* 13. Learn Page */
+.video-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  border: 3px solid #1B2A4A;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.rule-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.rule-card {
+  width: 220px;
+  height: 160px;
+  background-color: #FFFFFF;
+  border: 2px solid #2C3E6B;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.rule-card .card-front {
+  font-family: Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1B2A4A;
+  padding-top: 30px;
+}
+
+.rule-card .card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1B2A4A;
+  color: #FAF3E0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  opacity: 0;
+  transition: opacity 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.rule-card:hover .card-back {
+  opacity: 1;
+}
+
+blockquote {
+  border-left: 4px solid #E8A838;
+  margin: 20px 0;
+  padding: 15px 20px;
+  background-color: rgba(232, 168, 56, 0.08);
+  font-style: italic;
+  color: #555555;
+  border-radius: 0 8px 8px 0;
+}
+
+blockquote footer {
+  font-style: normal;
+  font-size: 0.9em;
+  color: #888888;
+  margin-top: 8px;
+}
+
+
+/* 14. Footer */
+.site-footer {
+  background-color: #1B2A4A;
+  color: #DDD5C5;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.site-footer a {
+  color: #E8A838;
+}
+
+.site-footer a:hover {
+  color: #FAF3E0;
+}
+
+.site-footer p {
+  margin: 5px 0;
+  font-size: 0.95em;
+}
+
+
+/* 15. Animations */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-in {
+  animation-name: fadeSlideIn;
+  animation-duration: 1s;
+}
+
+.pulse-icon {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: 3;
+}
+
+
+/* 16. Transitions & Filters */
+.hover-grow {
+  transition: transform 0.3s;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+.hover-shadow {
+  transition: box-shadow 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.img-filter-sepia {
+  filter: sepia(40%);
+  transition: filter 0.4s;
+}
+
+.img-filter-sepia:hover {
+  filter: sepia(0%);
+}

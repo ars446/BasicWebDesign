@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Imitation Assignment</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .byline {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 15px;
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #fafafa;
+            border: 1px solid #b0b0b0;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .card img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .penguins {
+            border-radius: 50%;
+            filter: sepia(50%);
+            border: 1px solid #00000099;
+        }
+
+        .football-card img {
+            max-width: 70%;
+        }
+
+        .football {
+            border: 30px solid #000;
+            border-image: url(images/tic-tac-toe.png) 48 round;
+            filter: grayscale(100%);
+        }
+
+        .dinosaur {
+            filter: hue-rotate(90deg) drop-shadow(8px -2px 3px #000);
+            max-width: 80%;
+        }
+
+        .seagull-frame {
+            background: linear-gradient(to bottom right, #8888FF 0%, #b8c0e8 50%, #FFFFFF 100%);
+            padding: 15px;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.4);
+            display: flex;
+        }
+
+        .seagull {
+            display: block;
+            max-width: 100%;
+        }
+
+        .butterfly {
+            border-radius: 30% 0% 30% 0%;
+            filter: invert(100%);
+            opacity: 0.6;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .theater-card {
+            position: relative;
+        }
+
+        .theater-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .theater-wrapper img {
+            display: block;
+            max-width: 100%;
+            filter: blur(2px);
+        }
+
+        .theater-wrapper .label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            text-shadow: 2px 2px 2px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Imitation Assignment</h1>
+    <p class="byline">By Arsenii Kosterin</p>
+    <div class="gallery">
+        <div class="card">
+            <img src="images/penguins.jpg" alt="Penguins" class="penguins">
+        </div>
+        <div class="card football-card">
+            <img src="images/football_field.jpg" alt="Football Field with Tic-Tac-Toe Border" class="football">
+        </div>
+        <div class="card">
+            <img src="images/dinosaur.png" alt="Dinosaur" class="dinosaur">
+        </div>
+        <div class="card">
+            <div class="seagull-frame">
+                <img src="images/seagull.png" alt="Seagull" class="seagull">
+            </div>
+        </div>
+        <div class="card butterfly-card">
+            <img src="images/butterfly.jpg" alt="Butterfly" class="butterfly">
+        </div>
+        <div class="card theater-card">
+            <div class="theater-wrapper">
+                <img src="images/theater_stage.jpg" alt="Theater Stage">
+                <span class="label">Presenting</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
